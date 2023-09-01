@@ -1,0 +1,13 @@
+[package]
+name = "boreal_py"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "boreal_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.19.0"
+boreal = "0.2.0"
