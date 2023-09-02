@@ -31,12 +31,12 @@ impl YaraScanner {
 }
 
 #[pyclass]
-struct Yara {
+struct YaraRules {
     raw_rules: String,
     externals: HashMap<String, String>,
 }
 #[pymethods]
-impl Yara {
+impl YaraRules {
     #[new]
     pub fn new() -> PyResult<Self> {
         return Ok(Self {
@@ -68,7 +68,7 @@ impl Yara {
 
 #[pymodule]
 fn boreal_py(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<Yara>()?;
+    m.add_class::<YaraRules>()?;
     m.add_class::<YaraScanner>()?;
     Ok(())
 }

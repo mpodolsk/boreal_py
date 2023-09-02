@@ -29,7 +29,7 @@ rule yyy_rule1
 """
 
 def test_scanner():
-    yara = boreal_py.Yara()
+    yara = boreal_py.YaraRules()
     yara.add_rules_str(example_conent_rule)
     yara.define_symbol("filename", "")
     scanner = yara.compile()
