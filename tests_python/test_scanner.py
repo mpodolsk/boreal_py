@@ -1,6 +1,7 @@
 import boreal_py
 import os
-
+import string
+import random
 
 test_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -27,6 +28,21 @@ rule yyy_rule1
                 filename endswith "blob_of_data.txt" and $s1
         }
 """
+# def gen_ran_str(length: int):
+#     source = string.ascii_lowercase
+#     source += string.ascii_uppercase
+#     source += string.punctuation
+#     source += string.digits
+#     return ''.join(random.choice(source) for i in range(length))
+
+# def setup_file():
+#     with open('testing_blob','a+') as f:
+#         for i in range(10000):
+#             f.write(gen_ran_str(1000))    
+#     return
+
+# setup_file()
+
 
 def test_scanner():
     yara = boreal_py.YaraRules()
