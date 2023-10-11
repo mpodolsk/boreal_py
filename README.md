@@ -49,3 +49,9 @@ tomli==2.0.1
 $ ./test.sh
 ```
 
+## build and publish
+```bash
+$docker run --rm -v $(pwd):/io ghcr.io/pyo3/maturin build --release --interpreter 3.11
+$twine upload target/wheels/<build>
+
+```
